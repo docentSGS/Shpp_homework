@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p></p>
+<form name="form" onsubmit="return validate()">
+  <p></p>
+Name: <input type="text" name="name" placeholder="enter your name">
+<p></p>
+<span style="color: red" id="namef"></span> <br>
+E-mail: <input type="text" name="email" placeholder="enter your email">
+<span style="color: red" id="emailf"></span>
+<p></p>
+<input type="submit" value="Send form">
+</form>
+
+<script type="text/javascript">
+  function validate() {
+    var x = document.forms["form"]["name"].value;
+    var y = document.forms["form"]["email"].value;
+
+    if(x.length==0) {
+      document.getElementById("namef").innerHTML = " Поле обязательно для заполнения";
+      return false;
+    }
+    if(y.length==0) {
+      document.getElementById("emailf").innerHTML = "Поле обязательно для заполнения";
+      return false;
+    }
+    var at = y.indexOf("@");
+    var dot = y.indexOf(".");
+    if(at<1 || dot <1) {
+      document.getElementById("emailf").innerHTML = "Error email";
+      return false;
+    }
+  }
+</script>
+</body>
+</html>
