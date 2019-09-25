@@ -1,15 +1,21 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
 .body {
   margin: 0px;
   padding: 0px;
 }
 
 .basicBlock {
+  background-color: #efefef;
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 0 auto;
   text-align: justify;
-  font-size: 11pt;
+  font-size: 1em;
   font-family: sans-serif;
+  overflow: auto;
 }
 
 .header {
@@ -17,30 +23,33 @@
   background-color: #e15f41;
   height: 50px;
   text-align: center;
-  font-size: 16pt;
+  font-size: 1em;
   font-family: serif;
 }
 
 .leftColumn {
   float: left;
   background-color: #3dc1d3;
-  text-align: center;
-  line-height: 50px;
+  background-color: #63cdda;
   width: 200px;
-  height: 1000px;
-}
+  height: 50em;
+  line-height: 3;
+  text-align: center;
+ }
 
 .rightColumn {
   float: right;
   background-color: #63cdda;
-  line-height: 50px;
-  text-align: center;
   width: 200px;
-  height: 1000px;
-}
+  height: 50em;
+  line-height: 3;
+  text-align: center;
+
+ }
 
 .content {
-  padding: 20px;
+  padding-left: 2em;
+  padding-right: 2em;
   line-height: 1.5;
   text-align: justify;
   margin-left: 200px;
@@ -51,8 +60,10 @@
 .footer {
   background-color: #596275;
   clear: both;
-  position: fixed;
-  left: 0; bottom: 0;
-  padding: 10px;
-  width: 100%;
+  position: static;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+
 }
