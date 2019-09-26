@@ -62,8 +62,10 @@
             <input type="radio" name="gender" value="female"> Female
           </label></p>
           <p><label>
-          <input type="text" placeholder="Type here your email, please" size="50">
+          <input type="email" placeholder="Type here your email, please" size="50">
           </label></p>
+          <p><input class="btn2" type="submit" value="Send email!" onclick="alert('You send email. Ok!')" name="btn2">
+          <input type="reset" name="rst" class="btn3"> </p>
           <p><label>
           <input type="text" placeholder="Type here your phone, please" size="50">
           </label></p>
@@ -80,9 +82,14 @@
             <p><label>
               <input type="datetime-local" name="date">
             </label></p>
+            <p><label><p>Enter number from 3 to 5</p>
+              <input type="number" name="num" placeholder="*****" min="3" max="8">
+              <input type="submit" name="num" value="Send it!">
+            </label></p>
+            <p><label>Select a file:
+               <input type="file" name="myFile">
+            </label></p>
           <textarea name="comment" cols="48" rows="3" placeholder="Ask your question"></textarea></label></p>
-          <p><input class="btn2" type="submit" value="Send email!" onclick="alert('You send email. Ok!')" name="btn2">
-          <input type="reset" name="rst" class="btn3"> </p>
 
         </form>
       </div>
