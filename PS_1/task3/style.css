@@ -72,7 +72,7 @@
   border-radius: 3px;
 }
 
-.btn2 {
+.btn2 .btn3 .btn4{
   border: 1px solid #fff;
   background-color: inherit;
   color: #fff;
@@ -142,7 +142,12 @@
   text-align: center;
 }
 
-.input {
-  width: 100%;
-  length: 800px;
+.usr_date-time {
+width:  350px;
 }
+
+}
+ /* .input {
+  width: 100%;
+  length: 5em;
+} */
