@@ -68,25 +68,11 @@
   border: 1px solid #fff;
   background-color: inherit;
   color: #fff;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
   border-radius: 3px;
-}
-
-.btn2 .btn3 .btn4{
-  border: 1px solid #fff;
-  background-color: inherit;
-  color: #fff;
-  padding: 5px 20px;
-  border-radius: 3px;
-  align-items: center;
 }
 
 .btn:hover {
-  background: #009432;
-  color: #f368e0;
-}
-
-.btn2:hover{
   background: #009432;
   color: #f368e0;
 }
@@ -108,7 +94,6 @@
   padding: 20px;
   border-radius: 50%;
 }
-
 
 .column_link {
   color: #000;
@@ -142,12 +127,13 @@
   text-align: center;
 }
 
-.usr_date-time {
-width:  350px;
+.usr_date-time,
+.usr_data,
+#usr_num,
+#textarea {
+width: 22em;
 }
 
+#search{
+  width: 17em;
 }
- /* .input {
-  width: 100%;
-  length: 5em;
-} */
