@@ -1,160 +1,178 @@
-.body {
-  margin: 0px;
-  padding: 0px;
+* {
+  box-sizing: border-box;
 }
 
-.main_block {
+body {
   display: flex;
-  flex-wrap: wrap;
-  color: #d3bb89;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
 }
 
-.col_left{
+.wrapper {
+  color: #d3bb89;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftColumn {
   width: 50%;
   position: relative;
   overflow: hidden;
+  background-image: url("img/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-}
-
-.col_right {
+.rightColumn {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #202020;
   text-align: left;
 }
 
-.header {
+.rightColumn_header {
   text-align: center;
-  font-family: game_of_thronesregular;
-  padding-top: 30px;
+  font-family: "game_of_thronesregular", serif;
+  font-size: 1em;
+  font-weight: lighter;
+  margin-top: 2em;
 }
 
-input[type=email]:invalid {
-  border: 2px solid red;
- }
-
-.input {
-  background: #202020;
-  color: #fef8eb;
-  border: none;
-  padding: 3px;
-  width: 350px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #d3bb89;
-  font-family: open_sansregular;
-}
-
-.house {
-  background: #202020;
-  border: none;
-  padding: 3px;
-  color: #fef8eb;
-  width: 350px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #d3bb89;
-  font-family: open_sansregular;
-}
-
-.form_1,
-.form_2 {
+form {
   background-color: #202020;
-  padding: 20px 120px 50px 120px;
- }
-
-.tittle_2 {
-  font-size: 8pt;
-  color: #fef8eb;
-  font-family: open_sansregular;
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
 }
 
-.tittle {
-  text-align: left;
-  font-family: eb_garamond08_regular;
+label {
+  font-size: 1.3em;
+  font-family: "eb_garamond08_regular", "open_sansregular", serif;
+  position: relative;
 }
 
-.msg {
-  font-size: 10pt;
-  font-family: open_sansregular;
+.note {
   color: #fef8eb;
-  padding: 0 120px 10px 20px;
-  margin-left: 120px;
-  margin-bottom: 5px;
+  font-size: 0.8em;
+  font-family: "eb_garamond08_regular", "open_sansregular", serif;
+}
+
+.info_msg {
+  font-size: 1em;
+  font-family: "eb_garamond08_regular", "open_sansregular", serif;
+  color: #fef8eb;
+  padding: 0 0 0 1em;
+  margin: 1em 0;
   border-left: 2px solid #d3bb89;
 }
 
-.btn_1,
-.btn_2 {
-  background-color: #c19a49;
+input {
+  background: #202020;
+  color: #fef8eb;
+  border: none;
+  margin: 1em 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #d3bb89;
+  font-family: "open_sansregular", "eb_garamond08_regular", sans-serif;
+  font-size: 1em;
+  height: 3em;
+}
+
+select {
+  font-size: 1em;
+}
+
+#houses {
+  background: #202020;
   border: none;
   color: #fef8eb;
-  width: 355px;
-  height: 35px;
+  margin: 1em 0;
+  height: 3em;
+  padding-bottom: 1.2em;
+  border-bottom: 2px solid #d3bb89;
+  font-family: "open_sansregular", "eb_garamond08_regular", sans-serif;
 }
 
-.check{
-  vertical-align:top;
-  margin:0 3px 0 0;
-  width:10px;
-  height:10px;
+#aboutUser {
+  background: #202020;
+  border: none;
+  color: #fef8eb;
+  height: 4em;
+  margin:  1em 0;
+  font-family: "open_sansregular", "eb_garamond08_regular", sans-serif;
+  font-size: 1em;
+  border-bottom: 2px solid #d3bb89;
 }
 
-.check + label{
-  cursor:pointer;
+.button {
+  background-color: #c19a49;
+  color: #fef8eb;
+  border: none;
+  height: 3em;
+  margin-top: 2em;
+  line-height: 2.5;
 }
 
-.check:not(checked){
-  position:absolute;
-  opacity:0;
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 10px;
+  height: 10px;
 }
 
-.check:not(checked) + label {
-  position:relative;
-  padding: 0 0 0 60px;
+.checkbox + label {
+  cursor: pointer;
 }
 
-.check:not(checked) + label:before {
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 40px;
+}
+
+.checkbox:not(checked) + label:before {
   content: '';
   position: absolute;
   text-align: center;
-  top:0;
-  left:0;
-  width:20px;
-  height:20px;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
   background: #d3bb89;
   border-radius: 3px;
 }
 
-.check:checked + label:before {
+.checkbox:checked + label:before {
   background: #c19a49;
-  content: '\2713';
+  content: '*';
   color: #000;
-}
-
-.check:checked + label:after {
-  left:20px;
 }
 
 @font-face {
   font-family: 'game_of_thronesregular';
   src: url('fonts/gameofthrones-webfont.woff2') format('woff2'),
-       url('fonts/gameofthrones-webfont.woff') format('woff');
-  font-weight: normal;
+  url('fonts/gameofthrones-webfont.woff') format('woff');
+  font-weight: lighter;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'eb_garamond08_regular';
   src: url('fonts/ebgaramond08-regular-webfont.woff2') format('woff2'),
-       url('fonts/ebgaramond08-regular-webfont.woff') format('woff');
+  url('fonts/ebgaramond08-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -162,7 +180,7 @@ input[type=email]:invalid {
 @font-face {
   font-family: 'open_sansregular';
   src: url('fonts/opensans-regular-webfont.woff2') format('woff2'),
-       url('fonts/opensans-regular-webfont.woff') format('woff');
+  url('fonts/opensans-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
