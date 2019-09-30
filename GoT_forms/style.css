@@ -117,8 +117,7 @@ select {
   background-color: #c19a49;
   color: #fef8eb;
   border: none;
-  height: 3em;
-  /* margin-top: 2em; */
+  height: 3em; 
   line-height: 2.5;
 }
 
