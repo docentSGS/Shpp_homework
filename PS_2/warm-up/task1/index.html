@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task 1</title>
+</head>
+<body>
+
+  <section class="task_1">
+    <div class="header"><h1>Calculator</h1></div>
+    <div class="content">
+      <form class="forms">
+        <p></p>
+        <label class="input_1">Please, enter first number</label>
+        <input id="num1" type="number" name="num1" placeholder="Enter first number">
+        <p></p>
+        <label class="input_1">Please, enter second number</label>
+        <input id="num2" type="number" name="num2"placeholder="Enter second number">
+        <p></p>
+        <span id="nottice">*Only numbers that end in 2,3 and 7 are summed.</span>
+        <p></p>
+        <input type="button" name="btn1" value="Calculate it!" onclick="calcSum()">
+      </form>
+      <div>
+        <span id="result">The sum of numbers in the interval between you entered = </span>
+        <div id="res"></div>
+      </div>
+      <script src="script.js"></script>
+    </section>
+  </body>
+  </html>
