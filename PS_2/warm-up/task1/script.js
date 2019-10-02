@@ -1,6 +1,6 @@
 function calcSum() {
-  let x = parseInt(document.getElementById("num1").value);
-  let y = parseInt(document.getElementById("num2").value);
+  let x = parseInt(document.getElementById("usr_input1").value);
+  let y = parseInt(document.getElementById("usr_input2").value);
   let sum = 0;
   if(x < y) {
     for(let i = x; i <= y; i++){
@@ -13,5 +13,5 @@ function calcSum() {
       sum += i;
     }
   }
-  document.getElementById("res").innerHTML = sum;
+  document.getElementById("calc_result").innerHTML = sum;
 }
