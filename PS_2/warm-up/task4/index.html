@@ -8,17 +8,18 @@
   <title>Task 4</title>
 </head>
 <body>
-  <section class="task4_wrapper">
+  <section class="wrapper">
     <span><h1>Make Chessboard</h1></span>
-    <form class="box-input">
-      <p><label id="board_size">Please enter chessboard proportions to format 8x8:</label></p>
+    <form class="field_input">
+      <p><label id="condition">Please enter chessboard proportions to format 8x8:</label></p>
       <input id="user_size" type="text" placeholder="8x8">
       <div id="btn_place">
-        <input type="submit" id="create" value="Make chessboard!" onclick="makeChessboard()">
+        <input type="button" id="btn_create" value="Make chessboard!" onclick="makeChessboard()">
       </div>
     </form>
+    <div id="box"></div>
+
   </section>
-  <div id="box"></div>
   <script src="script.js"></script>
 </body>
 </html>

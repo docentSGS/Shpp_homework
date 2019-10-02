@@ -1,4 +1,4 @@
-.task4_wrapper{
+.wrapper{
   display: flex;
   flex-direction: column;
 }
@@ -8,7 +8,7 @@
   padding-top: 2em;
 }
 
-#create {
+#btn_create {
   border-radius: 10%;
   background-color: #2f3542;
   color: #f1f2f6;
