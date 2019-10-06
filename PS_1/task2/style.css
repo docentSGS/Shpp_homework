@@ -22,7 +22,6 @@ html {
 .header {
   width: 100%;
   background-color: #e15f41;
-  padding-top: 10px;
   padding-top: 10px;;
   height: 100px;
   text-align: center;
@@ -30,22 +29,19 @@ html {
   font-family: serif;
 }
 
-.leftColumn {
+.leftColumn,
+.rightColumn  {
   float: left;
   background-color: #63cdda;
   width: 200px;
-  height: 50em;
+  height: 100vh;
+  min-height: calc(100vh - 70px);
   line-height: 3;
-  text-align: center;
+  text-align: center; 
 }
 
 .rightColumn {
   float: right;
-  background-color: #63cdda;
-  width: 200px;
-  height: 50em;
-  line-height: 3;
-  text-align: center;
 }
 
 .content {
