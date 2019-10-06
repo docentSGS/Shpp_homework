@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Task 4</title>
+</head>
+<body>
+  <section class="wrapper">
+    <span><h1>Make Chessboard</h1></span>
+    <form class="field_input">
+      <p><label id="condition">Please enter chessboard proportions to format 8x8:</label></p>
+      <input id="user_size" type="text" placeholder="8x8">
+      <div id="btn_place">
+        <input type="button" id="btn_create" value="Make chessboard!" onclick="makeChessboard()">
+      </div>
+    </form>
+    <div id="box"></div>
+
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
