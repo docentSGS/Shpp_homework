@@ -1,4 +1,4 @@
-.body {
+* {
   margin: 0px;
   padding: 0px;
 }
@@ -40,7 +40,9 @@
 }
 
 .container_1_img {
-  padding: 20px 150px;
+  width: 50%;
+  text-align: center;
+  padding: 50px;
 }
 
 #img_1 {
@@ -49,27 +51,33 @@
 }
 
 .container_1_content {
+  text-align: center;
   font-family: sans-serif;
-  padding: 30px 50px;
+  padding: 50px 50px 10px 10px;
+  width: 50%;
 }
 
 .container_1_content_row1 {
+  text-align: left;
   color: #fff;
+  padding: 20px;
   font-size: 25px;
 }
 
 .container_1_content_row2{
   color: #fff;
+  padding: 20px;
   font-size: 15px;
   text-align: justify;
- }
+}
 
 .btn {
   border: 1px solid #fff;
   background-color: inherit;
   color: #fff;
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 3px;
+  text-align: left;
 }
 
 .btn:hover {
@@ -131,7 +139,7 @@
 .usr_data,
 #usr_num,
 #textarea {
-width: 22em;
+  width: 22em;
 }
 
 #search{
