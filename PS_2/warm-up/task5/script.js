@@ -5,13 +5,32 @@ function go() {
   let array1 = data.split(',');
   let array2 = array1.map(validUrl).filter(Boolean);
   console.log(array2);
-  
-  for (let i = 0; i < array2.length; i++) {
-          array2[i] = array2[i].replace(/^https?:\/\//, '');
-      }
+ array2.sort();
 
 
-  document.getElementById('res').innerHTML = array2.sort(); //.forEach(alert);
+
+for (let i = 0; i < array2.length; i++) {
+  document.write("<a href='" + array2[i] + "'>" + array2[i] + "</a>")
+  // let link = array2[i];
+  // let element = document.createElement('a');
+  // element.setAttribute("href", link);
+  // element.innerHTML = array2[i];
+  // document.body.appendChild(element);
+}
+//   let a = document.createElement('a');
+//   for (let i = 0; i < array2.length; i++) {
+//       let link = document.createTextNode(array2[i]);
+//       a.appendChild(link);
+//       a.title = array2[i];
+//       a.href = array2[i];
+//       document.body.appendChild(a );
+// }
+  // for (let i = 0; i < array2.length; i++) {
+  //         array2[i] = array2[i].replace(/^https?:\/\//, '');
+  //     }
+
+
+  // document.getElementById('res').innerHTML = array2.sort(); //.forEach(alert);
 }
 
 function validUrl(value, index, array){
