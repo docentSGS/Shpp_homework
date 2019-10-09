@@ -85,6 +85,11 @@
   color: #f368e0;
 }
 
+#BuyNow {
+  float: left;
+  margin-left: 1.5em;
+}
+
 .container_2 {
   background-color: #f7f1e3;
   display: flex;
@@ -94,6 +99,7 @@
 .container_2_col {
   width: calc(100%/3);
   text-align: center;
+  padding: 1em;
 }
 
 .fa {
@@ -135,6 +141,15 @@
   text-align: center;
 }
 
+.form_input {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_info {
+  padding-top: 10px;
+}
+
 .usr_date-time,
 .usr_data,
 #usr_num,
@@ -142,6 +157,11 @@
   width: 22em;
 }
 
-#search{
+#textarea {
+  resize: none;
+  -moz-appearance: none;
+}
+
+#search {
   width: 17em;
 }
