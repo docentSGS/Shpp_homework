@@ -5,6 +5,7 @@ html {
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Playfair Display', serif;
 }
 
 .basicBlock {
@@ -14,7 +15,6 @@ html {
   margin: 0 auto;
   text-align: justify;
   font-size: 1em;
-  font-family: sans-serif;
   overflow: auto;
   min-height: calc(100vh - 70px);
 }
@@ -37,7 +37,8 @@ html {
   height: 100vh;
   min-height: calc(100vh - 70px);
   line-height: 3;
-  text-align: center; 
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 
 .rightColumn {
@@ -47,7 +48,7 @@ html {
 .content {
   padding-left: 2em;
   padding-right: 2em;
-  line-height: 1.5;
+  line-height: 2;
   text-align: justify;
   margin-left: 200px;
   margin-right: 200px;
