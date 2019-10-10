@@ -57,17 +57,17 @@ body {
 
 .flexbox>.column {
   background-color: #16a085;
-  flex-basis: calc(100%/3);
+  flex-grow: 1;
 }
 
 .flexbox>.column:first-child+div {
   background-color: #27ae60;
-  flex-basis: calc(100%/3);
+  flex-grow: 1;
 }
 
 .flexbox .column:last-child {
   background-color: #2980b9;
-  flex-basis: calc(100%/3);
+  flex-grow: 1;
 }
 
 .grid {
