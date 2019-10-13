@@ -1,53 +1,41 @@
 
-function go() {
-  let data = document.getElementById('user_input').value;
+const userLinks = document.getElementById('user_input');
+userLinks.onblur = prepareLinkText;
 
-  let array1 = data.split(',');
-  let array2 = array1.map(validUrl).filter(Boolean);
-  console.log(array2);
+//Prepare the user to transform text into links
+function prepareLinkText() {
+  let data = userLinks.value;
+  let tempArray = data.split(',');
 
-  let tempArr;
+  tempArray = tempArray.map(function(e) {
+    return e.replace(/\s/g, '');
+  });
 
-  for (var i = 0; i < array2.length; i++) {
+  tempArray = tempArray.map(function(e) {
+    return e.replace(/^https?:\/\//, '');
+    });
 
-  
+    let finishedArray = tempArray.map(validUrlAndIp).filter(Boolean);
+    console.log(finishedArray);
+    finishedArray.sort();
+    makeLink(finishedArray);
   }
 
-  // array2.sort();
-
-  // for (let i = 0; i < array2.length; i++) {
-  //         array2[i] = array2[i].replace(/^https?:\/\//, '');
-  //     }
-  // let array3;
-  // for (let i = 0; i < array2.length; i++) {
-  //   // let array3 = array2[i].replace(/^https?:\/\//, " ");
-  //   array3 = array2[i].toString().replace(/^https?:\/\//, " "); //("http://", "");
-  //   }
-
-    for (let i = 0; i < array2.length; i++) {
-      document.write("<a href='" + array2[i] + "'>" + array2[i] + "</a>" + "<br>");
-      // let link = array2[i];
-      // let element = document.createElement('a');
-      // element.setAttribute("href", link);
-      // element.innerHTML = array2[i];
-      // document.body.appendChild(element);
+  // Make an array of substrings links
+  function makeLink(finishedArray) {
+    for (let i = 0; i < finishedArray.length; i++) {
+      let link = document.createElement('a');
+      let linkTitle = document.createTextNode(finishedArray[i]);
+      link.appendChild(linkTitle);
+      link.target = 'blank';
+      link.href = finishedArray[i];
+      link.innerHTML = finishedArray[i] + '<br>';
+      document.body.appendChild(link);
     }
-    //   let a = document.createElement('a');
-    //   for (let i = 0; i < array2.length; i++) {
-    //       let link = document.createTextNode(array2[i]);
-    //       a.appendChild(link);
-    //       a.title = array2[i];
-    //       a.href = array2[i];
-    //       document.body.appendChild(a );
-    // }
-
-
-
-    document.getElementById('res').innerHTML = array2.sort(); //.forEach(alert);
   }
-
-  function validUrl(value, index, array){
+  
+  // Weed out the garbage from the input by the user data
+  function validUrlAndIp(value, index, array){
     let res = value.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)|(\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b)/gi);
-
-      return  res;
+      return res;
     }
