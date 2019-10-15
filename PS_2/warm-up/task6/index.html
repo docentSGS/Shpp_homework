@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Task 6</title>
+  <script src="main.js"></script>
 </head>
 <body>
-
+  <section>
+    <form>
+      <div><label class="input">Enter any text</label></div>
+      <div><textarea id="user_text" rows="8" cols="30" autofocus></textarea></div>
+      <div><label class="input">Enter RegEx or text</label></div>
+      <div><input type="text" id="user_regEx" placeholder="Enter RegEx or text"></div>
+      <div><input type="button" id="match" value="Match!" onclick="searchAndMark()"></div>
+    </form>
+    <div id="result"></div>
+  </section>
 </body>
 </html>
