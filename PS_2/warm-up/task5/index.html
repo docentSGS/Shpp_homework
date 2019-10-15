@@ -8,12 +8,12 @@
 </head>
 <body>
   <section class="wrapper">
-    <div>
-      <textarea id="user_input"></textarea>
-    </div>
-    <!-- <input type="button" value="Start" onclick="go()"> -->
+    <form name="form1" onReset="alert('The text area will be cleared.')">
+      <div><textarea id="user_input" autofocus></textarea></div>
+      <div><input type="reset" value="Reset" id="reset_btn"></div>
+    </form>
     <div id="result"></div>
   </section>
-  <script src="script.js"> </script>
+  <script src="script.js"></script>
 </body>
 </html>
