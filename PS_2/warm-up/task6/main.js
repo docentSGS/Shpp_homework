@@ -1,12 +1,12 @@
 window.onload = function () {
-  const button = document.getElementById('matchBtn');
-  button.addEventListener('click', function(event) {
+  let btn = document.getElementById('matchBtn');
+  btn.addEventListener('click', function(event) {
     event.preventDefault();
     searchAndMark();
   })
 };
 
-function searchAndMark() { 
+function searchAndMark() {
   let inputText = document.getElementById('user_text').value;
   let regExp = new RegExp(document.getElementById('user_regEx').value, 'g');
   let outputText = inputText.replace(regExp, '<mark>$&</mark>');
