@@ -1,7 +1,7 @@
 window.onload = function () {
   let onClickBtn = document.getElementById('matchBtn');
-  onClickBtn.addEventListener('click', function(event) {
-    event.preventDefault();
+  onClickBtn.addEventListener('click', function(e) {
+    e.preventDefault();
     searchAndMark();
   })
 };
