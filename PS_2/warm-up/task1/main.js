@@ -1,6 +1,22 @@
+window.onload = function() {
+  const btnCalc = document.getElementById('btnCalc');
+  btnCalc.onclick = calcSum;
+}
+
+
 function calcSum() {
-  let x = parseInt(document.getElementById("usr_input1").value);
-  let y = parseInt(document.getElementById("usr_input2").value);
+  const first = document.getElementById('usr_input1').value;
+  const second = document.getElementById('usr_input2').value;
+  const result = document.getElementById('calc_result');
+  const pattern = /^-?[0-9]*$/;
+
+  if (!first.match(pattern) || !second.match(pattern)) {
+    result.innerHTML = 'Please, enter correct integer number';
+    return;
+  } else {
+    x = parseInt(first);
+    y = parseInt(second);
+  }
   let sum = 0;
 
   if(x < y) {
@@ -14,5 +30,5 @@ function calcSum() {
       sum += i;
     }
   }
-  document.getElementById("calc_result").innerHTML = sum;
+  result.innerHTML = sum;
 }

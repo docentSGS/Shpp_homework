@@ -12,12 +12,12 @@
     <h1>Calculator</h1>
     <div>
       <form>
-        <label class="condition">Please, enter first number</label>
+        <label class="condition" for="usr_input1" >Please, enter first number</label>
         <input id="usr_input1" type="number" placeholder="Enter first number">
-        <p><label class="condition">Please, enter second number</label>
+        <p><label class="condition" for="usr_input2">Please, enter second number</label>
         <input id="usr_input2" type="number" placeholder="Enter second number"></p>
         <span id="text_warning">*Only numbers that end in 2,3 and 7 are summed.<br></span>
-        <input type="button" name="btn1" value="Calculate it!" onclick="calcSum()">
+        <input type="button" id="btnCalc" name="btn1" value="Calculate it!">
       </form>
       <div>
         <span id="result_area"><br>The sum of numbers in the interval between you entered is:</span>
