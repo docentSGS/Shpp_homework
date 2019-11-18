@@ -1,5 +1,5 @@
 function calcSec() {
-  const usrTime = document.getElementById("usr_num").value;
+  const usrTime = document.getElementById("usrInput2").value;
   const resultStep2 = document.getElementById('result_time');
   const timePattern = /^\d{2}:\d{2}:\d{2}$/;
 
@@ -16,7 +16,7 @@ function calcSec() {
 }
 
 function calcTime() {
-  const usrSec = parseInt(document.getElementById('usr_input').value);
+  const usrSec = parseInt(document.getElementById('usrInput1').value);
   const resultStep1 = document.getElementById('result_sec');
   const secPattern = /^\d{1,}$/;
 
