@@ -1,11 +1,24 @@
-function makeChessboard() {
-  let size = document.getElementById('user_size').value;
-  let tempArray = size.split('x');
-  let x = parseInt(tempArray[0]);
-  let y = parseInt(tempArray[1]);
+window.onload = function() {
+  const button = document.getElementById('btn_create');
+  button.onclick = makeChessboard;
+}
 
-  let box = document.getElementById('box');
-  
+function makeChessboard() {
+  const boxSize = document.getElementById('user_size').value;
+  const box = document.getElementById('box');
+  const patern = /^[0-9]x[0-9]$/; // /^[0-9]+x[0-9]+$/
+
+  box.innerHTML = '';
+
+  if (!boxSize.match(patern)) {
+    box.innerHTML = 'Please, enter data to valid format';
+    return 0;
+  }
+
+  let coordinateArray = boxSize.split('x');
+  let x = parseInt(coordinateArray[0]);
+  let y = parseInt(coordinateArray[1]);
+
   for (let i = 0; i < x; i++) {
     let boxRow = document.createElement('div');
     boxRow.className = 'board';
@@ -21,4 +34,3 @@ function makeChessboard() {
     }
   }
 }
-makeChessboard();

@@ -10,16 +10,15 @@
 
 <body>
   <section class="wrapper">
-    <span><h1>Make Chessboard</h1></span>
+    <h1>Make Chessboard</h1>
     <form class="field_input">
-      <p><label id="condition">Please enter chessboard proportions to format 8x8:</label></p>
+      <label id="condition" for="user_size">Please enter chessboard proportions to format 8x8:<br></label>
       <input id="user_size" type="text" placeholder="8x8">
       <div id="btn_place">
-        <input type="button" id="btn_create" value="Make chessboard!" onclick="makeChessboard()">
+        <input type="button" id="btn_create" value="Make chessboard!">
       </div>
     </form>
     <div id="box"></div>
-
   </section>
   <script src="main.js"></script>
 
