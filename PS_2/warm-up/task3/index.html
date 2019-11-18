@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Task_3</title>
 </head>
 <body>
 
-  <section class="task_3">
-    <div class="time3">
-      <form class="user_input_4">
-        <label for="usr_dt1" class="label">Enter date and time ONE: <br></label>
-        <input id="usr_dt1" type="datetime-local" name="datetime">
-        <p></p>
-        <label for="usr_dt2" class="label">Enter date and time TWO: <br></label>
-        <input id="usr_dt2" type="datetime-local" name="datetime">
-        <p></p>
-        <input type="button" name="btn3" value="Calculate data&time span" onclick="calcTimeSpan()">
+  <section class="wrapper">
+    <div>
+      <form>
+        <label for="usrInput1" class="label">Enter date and time ONE:<br></label>
+        <input id="usrInput1" type="datetime-local" name="datetime">
+        <label for="usrInput2" class="label"><br>Enter date and time TWO:<br></label>
+        <input id="usrInput2" type="datetime-local" name="datetime">
+        <p><input type="button" id="btnCalc" name="btn3" value="Calculate data&time span"></p>
       </form>
-    </div> <p></p>
+    </div>
+    <div class="result"><span>The result is: </span>
+      <div id="calc_result"></div>
   </section>
   <script src="main.js"></script>
 
