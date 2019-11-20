@@ -1,5 +1,5 @@
 window.onload = function () {
-  let onClickBtn = document.getElementById('matchBtn');
+  const onClickBtn = document.getElementById('matchBtn');
   onClickBtn.addEventListener('click', function(e) {
     e.preventDefault();
     searchAndMark();
@@ -7,9 +7,8 @@ window.onload = function () {
 };
 
 function searchAndMark() {
-  let inputText = document.getElementById('userText').value;
-  let regExp = new RegExp(document.getElementById('userExp').value, 'g');
-  let outputText = inputText.replace(regExp, '<mark>$&</mark>');
+  const inputText = document.getElementById('userText').value;
+  const regExp = new RegExp(document.getElementById('userExp').value, 'g');
 
-  document.getElementById('result').innerHTML = outputText;
+  document.getElementById('result').innerHTML = inputText.replace(regExp, '<mark>$&</mark>');
 }
