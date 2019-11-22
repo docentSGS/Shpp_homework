@@ -18,7 +18,7 @@ window.onload = function() {
   });
 
   document.getElementById('findGoods').addEventListener('input', function(event) {
-    workingData = GOODS.filter(entry => entry.name.match(event.target.value));
+    workingData = GOODS.filter(entry => entry.name.toLowerCase().match(event.target.value.toLowerCase()));
     rebuildTable(workingData);
   });
 }
@@ -66,7 +66,6 @@ function sortData(a, b, title) {
 
 const ALL_TABLE_DATA = document.getElementById('tBody');
 const AMOUNT = document.getElementById('sumTotal');
-const CATEGORY_FILTER = document.getElementById('filter');
 const GOODS = [{
     category: 'furniture',
     name: 'Chair',
