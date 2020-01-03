@@ -1,11 +1,12 @@
 window.onload = function() {
-  rebuildTable(GOODS);
-  let workingData = GOODS;
+  rebuildTable(workingData);
+
   document.getElementById('category').addEventListener('click', function() {
-    rebuildTable(sortColumn(GOODS, "category"));
+    rebuildTable(sortColumn(workingData, "category"));
   });
+
   document.getElementById('name').addEventListener('click', function() {
-    rebuildTable(sortColumn(GOODS, "name"));
+    rebuildTable(sortColumn(workingData, "name"));
   });
 
   document.getElementById('filter').addEventListener('change', function(event) {
@@ -13,7 +14,8 @@ window.onload = function() {
       workingData = GOODS;
       rebuildTable(workingData);
     } else {
-      rebuildTable(workingData.filter(entry => entry.category === event.target.value));
+      workingData = GOODS.filter(entry => entry.category === event.target.value)
+      rebuildTable(workingData);
     }
   });
 
@@ -67,33 +69,35 @@ function sortData(a, b, title) {
 const ALL_TABLE_DATA = document.getElementById('tBody');
 const AMOUNT = document.getElementById('sumTotal');
 const GOODS = [{
-    category: 'furniture',
-    name: 'Chair',
-    amount: 1,
-    price: 20
-  },{
-    category: 'supplies',
-    name: 'Gel Pen',
-    amount: 20,
-    price: 2
-  },{
-    category: 'other',
-    name: 'Trash Bin',
-    amount: 1,
-    price: 5
-  },{
-    category: 'furniture',
-    name: 'Sofa',
-    amount: 1,
-    price: 50
-  },{
-    category: 'supplies',
-    name: 'Notebook',
-    amount: 3,
-    price: 3
-  },{
-    category: 'other',
-    name: 'Calendar 2019',
-    amount: 1,
-    price: 3
-  }];
+  category: 'furniture',
+  name: 'Chair',
+  amount: 1,
+  price: 20
+},{
+  category: 'supplies',
+  name: 'Gel Pen',
+  amount: 20,
+  price: 2
+},{
+  category: 'other',
+  name: 'Trash Bin',
+  amount: 1,
+  price: 5
+},{
+  category: 'furniture',
+  name: 'Sofa',
+  amount: 1,
+  price: 50
+},{
+  category: 'supplies',
+  name: 'Notebook',
+  amount: 3,
+  price: 3
+},{
+  category: 'other',
+  name: 'Calendar 2019',
+  amount: 1,
+  price: 3
+}];
+
+let workingData = GOODS;
