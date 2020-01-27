@@ -2,20 +2,25 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     if($(this).scrollTop() >= 50) {
-      $('#toTop').fadeIn();
+      if ($('#Up').is(':hidden')) {
+        $('#Up').css({opacity : 1}).fadeIn('slow');
+      }
     } else {
-      $('#toTop').fadeOut();
+      $('#Up').stop(true, false).fadeOut('fast');
     }
   });
 
-  $('#toTop').click(function() {
-    $('body, html').animate({scrollTop: 0},'slow');
+  $('#Up').click(function() {
+    $('html, body').stop().animate({scrollTop : 0}, 300);
   });
 
   $('.head_link').click(function(e){
     e.preventDefault();
-    let id = $(this).attr('href');
-    target = $(id).offset();
-    $('body, html').animate({scrollTop: target.top}, 1500);
-  });  
+    let mark = $(this).attr('href');
+    let windowHeight = $(window).innerHeight();
+    let anchorHeight = $(mark).innerHeight();
+    let toTop = $(mark).offset().top;
+    let middle = windowHeight > anchorHeight ? toTop - (windowHeight - anchorHeight)/2 : toTop;
+    $('body, html').animate({scrollTop: middle}, 1000);
+  });
 });

@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  background-color: #81ecec;
+  position: absolute;
+  margin-left: 5em;
+  width: 25em;
+  display: block;
+  border: 0.5px solid #0652DD;
+}
+
+.select {
+  font-size: 20px;
+  font-family: monospace;
+  padding-left: 0.5em;
+}
+
+.arrow {
+  position: absolute;
+  right: 15px;
+}
+
+div {
+  display: flex;
+}
+
+img {
+  background-color: #EA2027;
+  border: 0.5px solid #0652DD;
+  border-radius: 20%;
+  margin: 5%;
+  width: 35px;
+  height: 35px;
+}
+
+.unseen {
+  display: none;
+}
+
+.selected {
+  border: 2px solid #3B3B98;
+  background-color: #48dbfb;
+  font-weight: 400;
+  font-size: 25px;
+}
