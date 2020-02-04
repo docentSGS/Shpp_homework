@@ -5,7 +5,7 @@ $(document).ready(function () {
   let ddBlock = $('#dropdownID');
 
   for (let i of SPORTS) {
-    const logo = $('<img class="logo" src="' + i.img + '">');
+    const logo = $('<img class="logo" alt="sport" src="' + i.img + '">');
     const title = $('<p></p>').text(i.name);
     const option = $('<div></div>').addClass('unseen select').append(logo, title);
     $('#dropdownID').append(option);

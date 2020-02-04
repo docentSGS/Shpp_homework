@@ -1,17 +1,17 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
   background-color: #f7f1e3;
   display: flex;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .head_content > #head_brand_1, #head_brand_2 {
-  font-size: 50px;
+  font-size: 3em;
 }
 
 .head_content > #head_brand_2 {
@@ -28,14 +28,14 @@
 
 .head_link {
   text-decoration: none;
-  font-size: 12pt;
+  font-size: 1em;
   color: black;
 }
 
 .container_1 {
   background-color: #2bcbba;
   text-align: left;
-  font-size: 15pt;
+  font-size: 1em;
   display: flex;
 }
 
@@ -61,7 +61,7 @@
   text-align: left;
   color: #fff;
   padding: 20px;
-  font-size: 25px;
+  font-size: 1.5em;
 }
 
 .container_1_content_row2{
@@ -111,7 +111,7 @@
 
 .column_link {
   color: #000;
-  font-size: 18pt;
+  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .column_content {
-  font-size: 12pt;
+  font-size: 1em;
 }
 
 .footer {
@@ -130,7 +130,7 @@
 }
 
 .footer_head {
-  font-size: 20pt;
+  font-size: 2em;
   color: #fff;
   text-align: center;
   padding-top: 30px;
@@ -168,8 +168,8 @@
 
 #Up {
   background: url("img/up.png") no-repeat top left;
-  width: 63px;
-  height: 61px;
+  width: 60px;
+  height: 60px;
   position: fixed;
   bottom: 10px;
   right: 10px;

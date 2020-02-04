@@ -9,7 +9,7 @@ body {
   margin-left: 5em;
   width: 25em;
   display: block;
-  border: 0.5px solid #0652DD;
+  border: 1px solid #0652DD;
 }
 
 .select {
@@ -29,7 +29,7 @@ div {
 
 img {
   background-color: #EA2027;
-  border: 0.5px solid #0652DD;
+  border: 1px solid #0652DD;
   border-radius: 20%;
   margin: 5%;
   width: 35px;
