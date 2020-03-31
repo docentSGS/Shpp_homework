@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-  $('#selectID').append('<p class="arrow"><i class="fas fa-sort-down"></i></p>');
+  $('#dropdownID').append('<p class="arrow"><i class="fa fa-sort-down"></i></p>');
   let chosen = $('#selectID');
   let ddBlock = $('#dropdownID');
-
+    
   for (let i of SPORTS) {
     const logo = $('<img class="logo" alt="sport" src="' + i.img + '">');
     const title = $('<p></p>').text(i.name);

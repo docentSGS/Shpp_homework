@@ -17,8 +17,8 @@ $(document).ready(function() {
   $('.head_link').click(function(e){
     e.preventDefault();
     let mark = $(this).attr('href');
-    let windowHeight = $(window).innerHeight();
-    let anchorHeight = $(mark).innerHeight();
+    const windowHeight = $(window).innerHeight();
+    const anchorHeight = $(mark).innerHeight();
     let toTop = $(mark).offset().top;
     let middle = windowHeight > anchorHeight ? toTop - (windowHeight - anchorHeight)/2 : toTop;
     $('body, html').animate({scrollTop: middle}, 1000);

@@ -13,14 +13,15 @@ body {
 }
 
 .select {
-  font-size: 20px;
+  font-size: 1.5em;
   font-family: monospace;
   padding-left: 0.5em;
 }
 
-.arrow {
+p.arrow {
   position: absolute;
   right: 15px;
+  top: 25px;
 }
 
 div {
@@ -41,8 +42,6 @@ img {
 }
 
 .selected {
-  border: 2px solid #3B3B98;
+  border: 1px solid #3B3B98;
   background-color: #48dbfb;
-  font-weight: 400;
-  font-size: 25px;
 }
